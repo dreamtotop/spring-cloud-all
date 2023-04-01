@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.top</groupId>
     <artifactId>spring-cloud-all</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>spring-cloud-all spring cloud 技术栈</name>
     <description>spring-cloud-all</description>
     <properties>
@@ -36,11 +36,6 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.mysql</groupId>
-                <artifactId>mysql-connector-j</artifactId>
-                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
