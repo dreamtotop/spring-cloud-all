@@ -20,7 +20,7 @@ import java.util.List;
  * 分布式锁配置中心
  */
 @Configuration
-@EnableConfigurationProperties(Lock4j.class)
+@EnableConfigurationProperties(Lock4jProperties.class)
 @RequiredArgsConstructor
 public class LockAutoConfiguration {
     private final Lock4jProperties lock4jProperties;

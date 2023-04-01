@@ -9,24 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lock-core</artifactId>
-    <packaging>pom</packaging>
-    <description>分布式锁核心业务</description>
+    <artifactId>lock-redis-spring-boot-starter</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.top</groupId>
+            <artifactId>lock-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

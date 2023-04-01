@@ -1,5 +1,7 @@
 package org.top.executor;
 
+import org.top.exception.LockException;
+
 /**
  * 分布式锁核心处理器
  */
@@ -24,7 +26,7 @@ public interface LockExecutor<T> {
      * @param acquireTimeout
      * @return
      */
-    T acquire(String lockKey, String lockValue, long expire, long acquireTimeout);
+    T acquire(String lockKey, String lockValue, long expire, long acquireTimeout) throws LockException;
 
 
     /**
