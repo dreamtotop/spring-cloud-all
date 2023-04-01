@@ -10,8 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lock</artifactId>
+    <packaging>pom</packaging>
     <description>分布式锁组件</description>
 
+    <modules>
+        <module>lock-core</module>
+    </modules>
 
 
 </project>
