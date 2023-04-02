@@ -17,6 +17,7 @@
 
     <modules>
         <module>lock</module>
+        <module>guide-rpc-demo</module>
     </modules>
 
     <properties>
