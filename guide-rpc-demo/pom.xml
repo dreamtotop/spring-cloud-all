@@ -14,6 +14,7 @@
     <description>基于 Netty+Kyro+Zookeeper实现的RPC框架</description>
     <modules>
         <module>rpc-common</module>
+        <module>rpc-core</module>
     </modules>
 
     <properties>
