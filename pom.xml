@@ -18,6 +18,8 @@
     <modules>
         <module>lock</module>
         <module>guide-rpc-demo</module>
+        <module>netty</module>
+        <module>spring-boot-extension</module>
     </modules>
 
     <properties>
