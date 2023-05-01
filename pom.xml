@@ -20,6 +20,9 @@
         <module>guide-rpc-demo</module>
         <module>netty</module>
         <module>spring-boot-extension</module>
+        <module>spring-boot-tools</module>
+        <module>spring-boot-design</module>
+        <module>spring-boot-sharding-jdbc</module>
     </modules>
 
     <properties>
@@ -28,6 +31,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-cloud.version>2021.0.6</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+<!--        <spring-cloud.version>2021.0.5</spring-cloud.version>-->
+<!--        <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>-->
     </properties>
 
     <dependencyManagement>

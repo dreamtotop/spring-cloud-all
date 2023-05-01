@@ -1,0 +1,56 @@
+# mybatis 配置
+mybatis:
+  config-location: classpath:mybatis-config.xml # 配置 MyBatis 配置文件路径
+  #type-aliases-package: org.top.model
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+
+
+# sharding-jdbc 配置
+spring:
+  sharding-sphere:
+    datasource:   # 数据源配置
+      names: ds-orders-0, ds-orders-1, order-common
+      ds-orders-0:
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/lab18_orders_0?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useTimezone=true
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 19990210
+
+      ds-orders-1:
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/lab18_orders_1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useTimezone=true
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 19990210
+
+      order_common:
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/lab18_orders_common?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&useTimezone=true
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 19990210
+
+    sharding:  # 分片配置
+      tables:   # 表配置
+        orders:
+          actual-data-nodes: ds-orders-0.orders_$->{[0,2,4,6]}, ds-orders-1.orders_$->{[1,3,5,7]}
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+          database-strategy:
+            inline:
+              sharding-column: user_id
+              algorithm-expression: ds-orders-$->{user_id % 2}
+          table-strategy:
+            inline:
+              sharding-column: user_id
+              algorithm-expression: orders_$->{user_id % 8}
+
+        order_config:
+          actual-data-nodes: order-common.order_config
+
+    props:
+      sql:
+        show: true
+

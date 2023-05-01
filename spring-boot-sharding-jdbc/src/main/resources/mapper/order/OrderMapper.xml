@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.top.mapper.OrderMapper">
+
+    <resultMap id="baseMap" type="org.top.model.Order">
+        <id column="id" property="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result column="user_id" property="userId" javaType="java.lang.Long" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="baseSQL">
+        id, user_id
+    </sql>
+
+
+    <insert id="createOrder" parameterType="org.top.model.Order" >
+        insert into orders(user_id) values(#{userId})
+    </insert>
+
+    <select id="getOrders" resultMap="baseMap">
+        select <include refid="baseSQL"/> from orders
+    </select>
+
+
+    <select id="getOrdersByUserId" parameterType="Long" resultMap="baseMap">
+        select <include refid="baseSQL"/> from orders where user_id = #{userId}
+    </select>
+
+
+</mapper>
