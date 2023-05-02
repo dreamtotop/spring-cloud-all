@@ -23,6 +23,7 @@
         <module>spring-boot-tools</module>
         <module>spring-boot-design</module>
         <module>spring-boot-sharding-jdbc</module>
+        <module>spring-boot-multiple-data-source</module>
     </modules>
 
     <properties>
