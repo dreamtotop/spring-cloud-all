@@ -4,6 +4,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for orders_1
+
+-- database lab18_orders_1
 -- ----------------------------
 DROP TABLE IF EXISTS `orders_1`;
 CREATE TABLE `orders_1`(

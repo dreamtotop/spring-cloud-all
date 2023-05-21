@@ -1268,3 +1268,7 @@ public class OrderService {
 Sharding-JDBC ，相比 Sharding-Proxy 来说，是基于 client 模式，无需经过 proxy 一层的性能损耗，也不用考虑 proxy 的高可用，所以对于 Java 项目来说，更加被推荐。目前，阿里、京东、美团等公司，都采用 client 模式的分库分表中间件。
 
 当然，Sharding-Proxy 也是有其使用的场景。我们可以搭建一个 Sharding-Proxy 服务，然后使用 Navicat 等 MySQL GUI 工具连接该服务，方便查询数据。
+
+分库分表数据迁移实战:
+https://mp.weixin.qq.com/s/ZewY9KyVBsWqB1Fu2hNbSg
+https://mp.weixin.qq.com/s/wpzfIxixiAmDXEYuxLoZGQ

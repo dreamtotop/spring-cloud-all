@@ -4,6 +4,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for orders_0
+
+-- database lab18_orders_0
 -- ----------------------------
 DROP TABLE IF EXISTS `orders_0`;
 CREATE TABLE `orders_0`(
@@ -50,6 +52,8 @@ CREATE TABLE `orders_6`(
 
 -- ----------------------------
 -- Table structure for order_config
+
+-- database lab18_orders_common
 -- ----------------------------
 DROP TABLE IF EXISTS `order_config`;
 CREATE TABLE `order_config` (
